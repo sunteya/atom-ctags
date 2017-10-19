@@ -1,0 +1,8 @@
+--- a/node_modules/ctags/src/ctags.coffee	2017-10-19 09:27:09.000000000 +0800
++++ b/node_modules/ctags/src/ctags.coffee	2017-10-19 09:20:43.000000000 +0800
+@@ -1,4 +1,4 @@
+-{Tags} = require(process.resourcesPath + '/app/node_modules/ctags/build/Release/ctags.node')
++{Tags} = require(process.resourcesPath + '/app.asar.unpacked/node_modules/ctags/build/Release/ctags.node')
+ es = require 'event-stream'
+ 
+ exports.findTags = (tagsFilePath, tag, options, callback) ->

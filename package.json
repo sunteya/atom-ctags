@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "postinstall": "patch -p1 < ctags.patch"
+  },
   "name": "atom-ctags",
   "version": "5.1.0",
   "main": "./lib/main",
