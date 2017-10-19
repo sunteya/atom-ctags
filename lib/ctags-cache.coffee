@@ -29,10 +29,12 @@ module.exports =
 
   initExtraTags: (paths) ->
     @extraTags = {}
-    for p in paths
-      p = p.trim()
-      continue unless p
-      @readTags(p, @extraTags)
+    for base in atom.project.getPaths()
+      for p in paths
+        p = p.trim()
+        continue unless p
+        file = path.resolve(base, p)
+        @readTags(file, @extraTags)
 
   readTags: (p, container, callback) ->
     console.log "[atom-ctags:readTags] #{p} start..."
